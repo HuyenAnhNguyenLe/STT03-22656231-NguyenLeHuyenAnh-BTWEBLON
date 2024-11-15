@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Chi tiết sản phẩm - SPIES</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../js/jquery-3.7.1.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="shortcut icon" href="../images/logoha.png" type="image/x-icon" />
+</head>
+<style>
+    
+    
+    .product-detail {
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .description {
+        font-size: 1.2em;
+    }
+    
+    .price {
+        font-size: 1.5em;
+        color: #e67e22;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <!-- header section start -->
+    <header
+      class="header_section"
+      style="position: fixed; top: 0; z-index: 1000"
+    >
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a
+          style="align-items: center; display: flex; margin: 0"
+          class="navbar-brand"
+          href="trangchu.html"
+        >
+        <div class="logo">
+            <div class="lghd" style="margin:auto; padding:10px; text-align: center; " >
+              <img  src="../images/logoha.png" alt="Logo" class="logo-image"> 
+              <span> SPIES</span>
+            </div>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class=""></span>
+        </button>
+        <div
+          class="navbar navbar-expand alert-success"
+          id="navbarSupportedContent"
+        >
+
+<!--menu-->
+          <ul class="navbar-nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="trangchu.html">Trang Chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gioithieu.html"> Giới Thiệu </a>
+              
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="products.html"> Sản Phẩm </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"> Liên hệ </a>
+              
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="story.html">Câu chuyện sản phẩm </a>
+              <ul class="submenu">
+                <li><a href="story1.html">Câu Chuyện Moonlight Mermaid </a></li>
+                <li><a href="story2.html">Câu Chuyện Little Angel </a></li>
+                <li><a href="story3.html">Câu Chuyện Strawberry Rococo Cloud </a></li>
+                <li><a href="story4.html">Câu Chuyện Swan Ballet </a></li>
+                
+              </ul>
+            </li>
+          </ul>
+
+<!------------------------------------------->
+          <div class="user_option">
+            <a href="login.html">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <span> Đăng Nhập </span>
+            </a>
+            <a href="giohang.html">
+              <!-- Gio hang -->
+              <i class="fa fa-shopping-bag" aria-hidden="true"></i
+              ><span id="totalCart">0</span>
+            </a>
+            <form class="d-flex search-bar">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Tìm kiếm"
+                aria-label="Search"
+              />
+              <button class="btn nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header section end -->
+    <main>
+        <!-- Product Section -->
+        <div class="container mt-5" style="padding-top: 100px">
+            <div class="row">
+                <!-- Product Image -->
+                <div class="col-md-5">
+                    <img style="height: auto; max-width: 70%; margin: 0 0 0 80px" src="../images/img-1.png" class="image_1" alt="Bảng trang điểm năm màu Midsummer Fairytales nổi" />
+                </div>
+                <!-- Product Details -->
+                <div class="col-md-7 product_box" style="border: none; width: 600px">
+                    <div class="buy-bt">
+                        <h1 class="bursh_text product-title" style="text-align: left;"><b>Bảng trang điểm năm màu Midsummer Fairytales nổi</b></h1>
+                        <h5 class="price">869.000 ₫</h5>
+                        <div class="my-3">
+                            <label for="quantity" class="form-label">Số lượng</label>
+                            <input type="number" class="form-control w-25" id="quantity" value="1" />
+                        </div>
+                        <li>
+                            <input type="hidden" value="1" class="idProduct" />
+                            <input type="hidden" value="Bảng trang điểm năm màu Midsummer Fairytales nổi" class="nameP" />
+                            <input type="hidden" value="../images/img-1.png" class="imageP" />
+                            <input type="hidden" value="869000" class="priceP" />
+                            <button style="color: #ffffff; background: #e67e22; border: none;" class="add-to-cart btn btn-primary" data-name="Tên sản phẩm 1" data-price="200000">
+              <b>Thêm vào giỏ hàng</b>
+          </button>
+                        </li>
+                    </div>
+                </div>
+                <!-- Description and Review Tabs -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true" style="color: rgb(85, 85, 85)">
+                  <b> Mô tả</b>
+                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false" style="color: rgb(85, 85, 85)">
+                  <b>Đánh giá (0)</b>
+                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content p-4" id="myTabContent">
+                            <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+
+                                Lấy cảm hứng từ những hộp trang sức cổ, bảng phấn mắt của chúng tôi tự hào với lớp mạ điện màu hồng tinh tế tạo thêm nét thanh lịch. Bao bì kết hợp nét quyến rũ của truyện cổ tích với vẻ đẹp cổ điển, có hình ảnh những nàng tiên hoa giữa khung cảnh nở
+                                rộ. Sự kết hợp giữa sự tưởng tượng trẻ trung và sự tinh tế vượt thời gian mang đến tinh túy mơ mộng cho bộ sưu tập trang điểm của bạn. Được chế tác bằng công nghệ mới nhất, bảng phấn mắt của chúng tôi bao gồm bốn tông màu
+                                lì và một tông màu ngọc trai. Kết cấu mượt mà, lướt nhẹ trên da, bám đều trên da, đảm bảo độ bền lâu, chống thấm nước với màu sắc rực rỡ. Trải nghiệm tông màu 01 Hazel Fawn, với tông màu lạnh trung tính của nâu tro và xám
+                                đá phiến, được tăng cường bởi màu nude lì nguyên chất để tạo chiều sâu và độ tương phản. Một chút ánh bạch kim tạo nên lớp nền rực rỡ, hoàn hảo để tạo vẻ ngoài khói quyến rũ hoặc sự thanh lịch hàng ngày.
+                                <br><b>Mẹo ứng dụng</b> </br>
+                                <ul>1. Dùng ngón tay hoặc cọ để thoa lớp nền có tông màu sáng nhất.</ul>
+
+                                <ul> 2. Chọn màu yêu thích và áp dụng để tăng thêm vẻ đẹp. Lặp lại nếu cần.</ul>
+
+                                <ul>3. Nhẹ nhàng ấn một lượng kim tuyến thích hợp để tăng thêm độ lấp lánh.</ul>
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                                <p>Chưa có đánh giá nào.</p>
+                                <!-- Review Form -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="reviewText" class="form-label">Nhận xét của bạn *</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="reviewText"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Tên *</label>
+                                        <input type="text" class="form-control" id="name" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email *</label>
+                                        <input type="email" class="form-control" id="email" required />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Gửi</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Related Products Section -->
+                <div class="row mt-5">
+                    <h3><b>Sản phẩm tương tự</b></h3>
+                    <div class="col-md-3 product_box" style="width: 20%; border: none; padding: 5px">
+                        <div class="card">
+                            <a href="products2.html">
+                                <img src="../images/img-2.png" class="card-img-top" alt="Bảng trang điểm sáu màu Swan Ballet" />
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Bảng trang điểm sáu màu Swan Ballet</b></h5>
+                                    <p class="price">869.000 ₫</p>
+                            </a>
+                            <li>
+                                <input type="hidden" value="2" class="idProduct" />
+                                <input type="hidden" value="Bảng trang điểm sáu màu Swan Ballet" class="nameP" />
+                                <input type="hidden" value="../images/img-2.png" class="imageP" />
+                                <input type="hidden" value="869000" class="priceP" />
+                                <button style="color: #515050; background: #bab8b8; border: none" class="add-to-cart btn btn-primary" data-name="Tên sản phẩm 2" data-price="200000">
+                              <b>Thêm vào giỏ hàng</b>
+                          </button>
+                            </li>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="col-md-3">
+            <div class="card"> <a href="products3.html">
+              <img
+                src="../images/img-3.png"
+                class="card-img-top"
+                alt="Son Li Little Angel"/>
+              <div class="card-body">
+                <h5 class="card-title"><b>Bảng phấn mắt Violet Strawberry Rococo</b></h5>
+                <p class="price">869.000 ₫</p></a>
+                            <a href="#" class="btn btn-primary" style="color: #515050; background: #bab8b8; border: none"><b>Thêm vào giỏ hàng</b></a>
+              </div>
+            </div>
+          </div>-->
+                    <div class="col-md-3 product_box" style="width: 20%; border: none; padding: 5px">
+                        <div class="card">
+                            <a href="products4.html">
+                                <img src="../images/img-4.png" class="card-img-top" alt="Son Li Little Angel" />
+                                <div class="card-body">
+                                    <h5 class="card-title"><b>Bảng trang điểm sáu màu Swan Ballet</b></h5>
+                                    <p class="price">998.000 ₫</p>
+                            </a>
+                            <li>
+                                <input type="hidden" value="4" class="idProduct" />
+                                <input type="hidden" value="Bảng trang điểm sáu màu Swan Ballet" class="nameP" />
+                                <input type="hidden" value="../images/img-4.png" class="imageP" />
+                                <input type="hidden" value="998000" class="priceP" />
+                                <button style="color: #515050; background: #bab8b8; border: none" class="add-to-cart btn btn-primary" data-name="Tên sản phẩm 4" data-price="200000">
+                            <b>Thêm vào giỏ hàng</b>
+                        </button>
+                            </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <footer>
+      <div class="footer_section layout_padding">
+        <div class="container">
+          <div class="footer_logo">
+            <a href="trangchu.html"><img src="../images/footer-logo.png" /></a>
+          </div>
+          <div class="contact_section_2">
+            <div class="row">
+              <div class="col-sm-4">
+                <h3 class="address_text">Thông tin</h3>
+                <div class="address_bt">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i
+                        ><span class="padding_left10">Địa chỉ : Phạm Ngũ Lão, GV, HCM</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-phone" aria-hidden="true"></i
+                        ><span class="padding_left10">Điện thoại : +84 867081103</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i
+                        ><span class="padding_left10"
+                          >Email : spies@gmail.com</span
+                        >
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="footer_logo_1">
+                  <a href="trangchu.html"><img src="../images/footer-logo.png" /></a>
+                </div>
+                <p class="dummy_text">
+                  
+                </p>
+              </div>
+              <div class="col-sm-4">
+                <div class="main">
+                  <h3 class="address_text">MỸ PHẨM HOT </h3>
+                  <p class="ipsum_text">
+                    làn da rạng rỡ tự tin cuốn hút
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="social_icon">
+            <ul>
+              <li>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+        <div class="container">
+          <p class="copyright_text">
+            © 2024 designeded by Huyen Anh
+        
+          </p>
+        </div>
+      </div>
+      
+                <!-- copyright section end -->
+    </footer>
+</body>
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<!-- fonts chữ-->
+<link href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400,700&display=swap&subset=latin-ext" rel="stylesheet" />
+<!--giỏ hàng-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+<script src="../js/detailProduct.js"></script>
+
+</html>

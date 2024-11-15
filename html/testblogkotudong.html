@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow Với Thumbnails Cuộn</title>
+    <style>
+        /* CSS cho Slideshow Container */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Các slide */
+        .mySlides {
+            display: none;
+        }
+
+        /* Ảnh trong slide */
+        .mySlides img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+        }
+
+        /* Nút Previous và Next */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0,0,0,0.5);
+            transition: background-color 0.3s;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Thumbnails Container */
+        .thumbnails-container {
+            display: flex;
+            overflow-x: auto;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #ccc;
+        }
+
+        /* Thumbnails */
+        .thumbnails-container img {
+            width: 100px;
+            height: 60px;
+            object-fit: cover;
+            margin-right: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: border 0.3s;
+        }
+
+        .thumbnails-container img.active, .thumbnails-container img:hover {
+            border: 2px solid #4CAF50;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .thumbnails-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .thumbnails-container {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            .thumbnails-container img {
+                width: 80px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="slideshow-container">
+
+    <!-- Các slide -->
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+1" alt="Image 1">
+    </div>
+
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Image 2">
+    </div>
+
+    <div class="mySlides">
+        <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Image 3">
+    </div>
+
+    <!-- Nút Previous và Next -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<!-- Thumbnails -->
+<div class="thumbnails-container">
+    <img src="https://via.placeholder.com/800x400?text=Image+1" alt="Thumbnail 1" onclick="currentSlide(1)" class="active">
+    <img src="https://via.placeholder.com/800x400?text=Image+2" alt="Thumbnail 2" onclick="currentSlide(2)">
+    <img src="https://via.placeholder.com/800x400?text=Image+3" alt="Thumbnail 3" onclick="currentSlide(3)">
+    <!-- Thêm nhiều thumbnail nếu cần -->
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Hàm để thay đổi slide khi nhấn nút
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Hàm để chọn slide cụ thể khi nhấn vào thumbnail
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    // Hàm hiển thị slide
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let thumbnails = document.querySelectorAll(".thumbnails-container img");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+
+        // Ẩn tất cả các slide
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Loại bỏ class 'active' khỏi tất cả các thumbnail
+        thumbnails.forEach((thumb) => {
+            thumb.classList.remove("active");
+        });
+
+        // Hiển thị slide hiện tại và thêm class 'active' vào thumbnail tương ứng
+        slides[slideIndex-1].style.display = "block";
+        thumbnails[slideIndex-1].classList.add("active");
+    }
+</script>
+
+</body>
+</html>
